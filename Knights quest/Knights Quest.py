@@ -92,7 +92,7 @@ class PlayerCharacter(arcade.Sprite):
         # --- Load Textures ---
 
         
-        main_path = os.path.join("assets/player")
+        main_path = os.path.join("Knights quest/assets/player")
 
         # Load textures for idle standing
         self.idle_texture_pair = load_texture_pair(f"{main_path}/Player1.png")
@@ -209,12 +209,12 @@ class MyGame(arcade.Window):
             
 
         # Load sounds
-        self.collect_coin_sound = arcade.load_sound("assets/gain_life.wav")
+        self.collect_coin_sound = arcade.load_sound(os.path.join("Knights quest/assets/gain_life.wav"))
         self.jump_sound = arcade.load_sound(":resources:sounds/jump1.wav")
-        self.game_over = arcade.load_sound("assets/life_lost.wav")
+        self.game_over = arcade.load_sound("Knights quest/assets/life_lost.wav")
 
 
-        self.background_music = arcade.load_sound("assets/background.mp3")
+        self.background_music = arcade.load_sound("Knights quest/assets/background.mp3")
         # play the background music
         arcade.play_sound(self.background_music, volume=0.20, pan = 0, looping = True)
 
@@ -228,7 +228,7 @@ class MyGame(arcade.Window):
         self.gui_camera = arcade.Camera(self.width, self.height)
 
         # Name of map file to load
-        map_name = os.path.join("assets/map.json")
+        map_name = os.path.join("Knights quest/assets/map.json")
 
         layer_options = {
             LAYER_NAME_PLATFORMS: {
